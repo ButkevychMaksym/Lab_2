@@ -1,0 +1,27 @@
+﻿<Window x:Class="BankApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bank App" Height="400" Width="525">
+    <Grid>
+        <StackPanel Margin="10">
+            <Label Content="Номер рахунку" />
+            <TextBox x:Name="AccountNumberTextBox" GotFocus="RemoveText" LostFocus="AddText" Margin="0,0,0,10"/>
+
+            <Label Content="Початковий баланс" />
+            <TextBox x:Name="InitialBalanceTextBox" GotFocus="RemoveText" LostFocus="AddText" Margin="0,0,0,10"/>
+
+            <Button Content="Створити рахунок" Click="CreateAccountButton_Click" Margin="0,0,0,20"/>
+
+            <Label Content="Номер рахунку для операції" />
+            <TextBox x:Name="TransactionAccountNumberTextBox" GotFocus="RemoveText" LostFocus="AddText" Margin="0,0,0,10"/>
+
+            <Label Content="Сума" />
+            <TextBox x:Name="AmountTextBox" GotFocus="RemoveText" LostFocus="AddText" Margin="0,0,0,10"/>
+
+            <Button Content="Поповнити рахунок" Click="DepositButton_Click" Margin="0,0,0,10"/>
+            <Button Content="Зняти гроші" Click="WithdrawButton_Click" Margin="0,0,0,20"/>
+
+            <Button Content="Показати всі рахунки" Click="ShowAllAccountsButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
